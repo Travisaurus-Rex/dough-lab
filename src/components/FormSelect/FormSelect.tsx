@@ -29,14 +29,14 @@ export function FormSelect<T extends string>({ label, options, value, onChange }
     }, []);
 
     return (
-        <div>
+        <div ref={ref}>
             <div>{label}</div>
             <div className="border border-black rounded-sm cursor-pointer px-3 py-2 hover:bg-gray-200" 
                 onClick={() => setShowOptions(val => !val)}>
                 { value }
             </div>
             {showOptions && 
-                <div ref={ref} className="border border-black rounded-b-lg overflow-hidden">
+                <div className="border border-black rounded-b-lg overflow-hidden">
                     {options.map(val => (
                         <div key={val} className="cursor-pointer px-3 py-2 hover:bg-blue-300" onClick={() => updateValue(val)}>{val}</div>
                     ))}
