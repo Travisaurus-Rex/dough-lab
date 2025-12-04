@@ -3,7 +3,7 @@ import { PizzaShape, type PizzaShape as PizzaShapeType } from '../../models/Pizz
 import { FormSelect } from '../FormSelect/FormSelect';
 
 export function ShapeSelector() {
-    const [shape, setShape] = useState<PizzaShapeType>('none');
+    const [shape, setShape] = useState<PizzaShapeType>('NONE');
 
     return (
         <div>
