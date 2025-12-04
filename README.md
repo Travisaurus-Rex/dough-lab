@@ -265,6 +265,8 @@ src/
  │   ├─ StyleSelector/
  │   └─ Results/
  ├─ models/
+ │   ├─ AreaInput.ts
+ │   ├─ DoughBreakdown.ts
  │   ├─ PizzaShape.ts
  │   ├─ PizzaStyle.ts
  │   └─ PizzaSize.ts
@@ -272,18 +274,17 @@ src/
  │   └─ pizzaStore.ts
  ├─ utils/
  │   ├─ doughCalculator.ts
- │   └─ resolveAreaInput.ts
+ │   ├─ resolveAreaInput.ts
+ │   └─ sizeOptionsForShape.ts
  └─ App.tsx
 ```
 
-The exact structure may differ slightly, but this is the conceptual layout.
-
 ---
 
-## 🛠 Getting Started
+## Getting Started
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/Travisaurus-Rex/dough-lab/
 cd doughlab
 npm install
 npm run dev
