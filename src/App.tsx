@@ -1,5 +1,6 @@
 import './App.css'
 import { ShapeSelector } from './components/ShapeSelector/ShapeSelector'
+import { SizeSelector } from './components/SizeSelector/SizeSelector'
 import { StyleSelector } from './components/StyleSelector/StyleSelector'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <div className="grid grid-cols-2 gap-5">
           <ShapeSelector />
           <StyleSelector />
+          <SizeSelector />
         </div>
       </div>
     </>
