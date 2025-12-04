@@ -29,7 +29,7 @@ export function FormSelect<T extends string>({ label, options, value, onChange }
     }, []);
 
     return (
-        <div ref={ref} className="relative">
+        <div ref={ref} className="relative select-none">
             <div>{label}</div>
             <div className="border border-black rounded-sm cursor-pointer px-3 py-2 hover:bg-gray-200" 
                 onClick={() => setShowOptions(val => !val)}>
