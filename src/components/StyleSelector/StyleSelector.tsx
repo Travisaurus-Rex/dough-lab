@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { PizzaStyle, type PizzaStyle as PizzaStyleType } from '../../models/PizzaStyle';
+import { PizzaStyle } from '../../models/PizzaStyle';
+import { usePizzaStore } from '../../stores/pizzaStore';
 import { FormSelect } from '../FormSelect/FormSelect';
 
 export function StyleSelector() {
-    const [style, setStyle] = useState<PizzaStyleType>('NONE');
-
+    const pizzaStyle = usePizzaStore((state) => state.style);
+    const setPizzaStyle = usePizzaStore((state) => state.setStyle);
     return (
         <div>
             <FormSelect 
                 label="Pizza Style"
                 options={PizzaStyle}
-                value={style}
-                onChange={(val) => setStyle(val)} />
+                value={pizzaStyle}
+                onChange={(val) => setPizzaStyle(val)} />
         </div>
     )
 }

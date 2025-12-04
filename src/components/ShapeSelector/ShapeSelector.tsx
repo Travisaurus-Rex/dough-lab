@@ -1,17 +1,18 @@
-import { useState } from 'react';
-import { PizzaShape, type PizzaShape as PizzaShapeType } from '../../models/PizzaShape';
+import { PizzaShape } from '../../models/PizzaShape';
+import { usePizzaStore } from '../../stores/pizzaStore';
 import { FormSelect } from '../FormSelect/FormSelect';
 
 export function ShapeSelector() {
-    const [shape, setShape] = useState<PizzaShapeType>('NONE');
-
+    const pizzaShape = usePizzaStore(state => state.shape);
+    const setPizzaShape = usePizzaStore(state => state.setShape);
+    
     return (
         <div>
             <FormSelect 
                 label="Pizza Shape"
                 options={PizzaShape}
-                value={shape}
-                onChange={(val) => setShape(val)} />
+                value={pizzaShape}
+                onChange={(val) => setPizzaShape(val)} />
         </div>
     )
 }
