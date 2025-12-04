@@ -34,7 +34,7 @@ DoughLab is a pizza dough calculation tool designed for experimentation, precisi
 ## Installation
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/Travisaurus-Rex/dough-lab
 cd doughlab
 npm install
 npm run dev
