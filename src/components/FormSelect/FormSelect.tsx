@@ -36,7 +36,7 @@ export function FormSelect<T extends string>({ label, options, value, onChange }
                 { value }
             </div>
             {showOptions && 
-                <div className="absolute w-100 z-999 bg-white border border-black rounded-b-lg overflow-hidden">
+                <div className="absolute top-[calc(100%-4px)] w-[100%] z-999 bg-white border border-black rounded-b-lg overflow-hidden">
                     {options.map(val => (
                         <div key={val} 
                              className="cursor-pointer px-3 py-2 hover:bg-blue-300" 
