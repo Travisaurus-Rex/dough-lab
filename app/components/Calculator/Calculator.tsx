@@ -12,9 +12,7 @@ import {
 import { resolveAreaInput } from "../../utils/resolveAreaInput";
 
 function Calculator() {
-  const shape = usePizzaStore((state) => state.shape);
-  const style = usePizzaStore((state) => state.style);
-  const size = usePizzaStore((state) => state.size);
+  const { shape, size, style } = usePizzaStore();
   const areaInput = resolveAreaInput(shape, size);
 
   let result = null;
