@@ -12,21 +12,16 @@ import {
 import { resolveAreaInput } from "../../utils/resolveAreaInput";
 
 function Calculator() {
-  const pizzaShape = usePizzaStore((state) => state.shape);
-  const pizzaStyle = usePizzaStore((state) => state.style);
-  const pizzaSize = usePizzaStore((state) => state.size);
-  const areaInput = resolveAreaInput(pizzaShape, pizzaSize);
+  const shape = usePizzaStore((state) => state.shape);
+  const style = usePizzaStore((state) => state.style);
+  const size = usePizzaStore((state) => state.size);
+  const areaInput = resolveAreaInput(shape, size);
 
   let result = null;
 
-  if (
-    pizzaShape !== "NONE" &&
-    pizzaSize !== "NONE" &&
-    pizzaStyle !== "NONE" &&
-    areaInput
-  ) {
+  if (shape !== "NONE" && size !== "NONE" && style !== "NONE" && areaInput) {
     const area = calculateArea(areaInput);
-    result = calculateDoughIngredients(area, pizzaStyle);
+    result = calculateDoughIngredients(area, style);
   }
 
   return (
